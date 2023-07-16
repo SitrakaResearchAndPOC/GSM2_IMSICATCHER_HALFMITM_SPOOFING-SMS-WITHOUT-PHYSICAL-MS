@@ -14,13 +14,12 @@
 
 # Attack limitations and advantages 
 * local attack but could be targeting (to find local victim)
-* victim could be reached on the real network (indeed call and sms)
+* victim couldn't be reached on the real network (indeed call and sms)
 * could be detectable with rooted phone and application like imsi-catcher detector, snoopsnitch because of open network
 
 # Devices  
 * USRP
 * motorola phone (aka calypso phone on google)
-* BladeRF
 * LimeSDR
   
 # Pratices
