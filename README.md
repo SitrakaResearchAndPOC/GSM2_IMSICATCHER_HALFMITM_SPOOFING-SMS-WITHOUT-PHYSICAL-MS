@@ -43,7 +43,7 @@ unzip osmo-nitb-scripts.zip
 ```
 cd osmo-nitb-scripts
 ```
-Database is at : /var/lib/osmocom/hlr.sqlite3  
+Database is at : /var/lib/osmocom/hlr.sqlite3    
 Installing all config  
 ```
 bash install_services.sh
@@ -305,7 +305,7 @@ bash trx.sh
 Click button power of motorola phone  
 Tape ctrl+shift+T  
 Launching osmo-nitb  with debug mode --debug=DRLL:DCC:DMM:DRR:DRSL:DNM
-Database at : /usr/src/CalypsoBTS/hlr.sqlite3  
+Database at : /usr/src/CalypsoBTS/hlr.sqlite3    
 ```
 osmo-nitb --yes-i-really-want-to-run-prehistoric-software -c /usr/src/CalypsoBTS/openbsc.cfg -l /usr/src/CalypsoBTS/hlr.sqlite3 -P -C --debug=DRLL:DCC:DMM:DRR:DRSL:DNM
 ```
