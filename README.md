@@ -1,4 +1,4 @@
-# GSM_IMSICATCHER_HALFMITM_SPOOFING-SMS-WITHOUT-PHYSICAL-MS
+# GSM2_IMSICATCHER_HALFMITM_SPOOFING-SMS-WITHOUT-PHYSICAL-MS
 * [motorola](https://www.youtube.com/watch?v=ZKa86zAWmQY&pp=ygURZ3NtIHNuaWZmaW5nIDI5YzM%3D) documentation
 * [spoofing](https://github.com/godfuzz3r/osmo-nitb-scripts/tree/master)
 * [phddays](https://sudonull.com/post/97315-MiTM-Mobile-contest-how-they-broke-mobile-communications-at-PHDays-V-Positive-Technologies-blog)
@@ -47,6 +47,22 @@ Database is at : /var/lib/osmocom/hlr.sqlite3
 Installing all config  
 ```
 bash install_services.sh
+```
+For avoiding lock database error 
+```
+fuse -k /var/lib/osmocom/hlr.sqlite3
+```
+Open HLR.db
+```
+gedit scripts/HLR.py 
+```
+Change 
+```
+self.db = sqlite3.connect(hlr_loc)
+```
+By
+```
+self.db = sqlite3.connect(hlr_loc, timeout=3000)
 ```
 Running the transceiver
 ```
@@ -107,6 +123,22 @@ cd osmo-nitb-scripts
 ```
 ```
 bash install_services.sh
+```
+For avoiding lock database error 
+```
+fuse -k /var/lib/osmocom/hlr.sqlite3
+```
+Open HLR.db
+```
+gedit scripts/HLR.py 
+```
+Change 
+```
+self.db = sqlite3.connect(hlr_loc)
+```
+By
+```
+self.db = sqlite3.connect(hlr_loc, timeout=3000)
 ```
 Running the transceiver
 ```
@@ -222,6 +254,23 @@ Save the configuration
 ```
 bash install_services.sh 
 ```
+For avoiding lock database error 
+```
+fuse -k /var/lib/osmocom/hlr.sqlite3
+```
+Open HLR.db
+```
+gedit scripts/HLR.py 
+```
+Change 
+```
+self.db = sqlite3.connect(hlr_loc)
+```
+By
+```
+self.db = sqlite3.connect(hlr_loc, timeout=3000)
+```
+Running transceiver
 ```
 bash trx.sh
 ```
@@ -299,6 +348,23 @@ Save the configuration
 ```
 bash install_services.sh 
 ```
+For avoiding lock database error 
+```
+fuse -k /var/lib/osmocom/hlr.sqlite3
+```
+Open HLR.db
+```
+gedit scripts/HLR.py 
+```
+Change 
+```
+self.db = sqlite3.connect(hlr_loc)
+```
+By
+```
+self.db = sqlite3.connect(hlr_loc, timeout=3000)
+```
+Running transceiver
 ```
 bash trx.sh
 ```
