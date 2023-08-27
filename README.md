@@ -335,7 +335,7 @@ python3 main_spoof.py
 ctrl+shift+T
 
 ```
-cd osmo-nitb-scripts/scripts_spoof2
+cd osmo-nitb-scripts-calypso/scripts_spoof2
 ```
 Tape `*#*#4636#*#*` and choose GSM only on your Android phone  
 Search GSM network (on your phone), associate with PLMN MCC 001 && MNC 01  
